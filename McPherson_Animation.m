@@ -51,9 +51,14 @@ k7u=(mu*k3+I*k2^2)/(ms+mu*k3+I*k2^2);
  
 tw=5;
 h=0.001;
- 
-Zr=0:0.4*h:0.4*2;
-Zr(end+1:tw/h+1)=Zr(end);
+
+Zr(1:0.2/h)=0;
+Zr(0.2/h+1:1/h+0.2/h+1)=0.2*sin(0:3.14*h/1:3.14);
+Zr(end+1:tw/h+1)=0;
+
+% Zr=0:0.4*h:0.4*2;             %choose between those for the input signals
+% Zr(end+1:tw/h+1)=Zr(end);
+
 % Zr(1)=0;
 % Zr(end+1:tw/h+1)=0.2;
 dZr=diff(Zr)/h;
@@ -120,7 +125,12 @@ jj=0;
 i=1;
 f2=figure('Name','Half Car','NumberTitle','off','units','normalized','outerposition',[0 0 1 1]);
 tic
-while i<=length(t)
+
+myVideo = VideoWriter('myVideoFile'); %open video file
+myVideo.FrameRate = 25;  %can adjust this, 5 - 10 works well for me
+open(myVideo)
+
+for i = 1:40:length(t)
     zs=Y(1,i);
     zu=Y(2,i);
     zr=Zr(i);
@@ -199,6 +209,8 @@ while i<=length(t)
     hold off
     
 
-    pause(0.01)
-    i=round(toc/h); % toc is a timer
+    frame = getframe(f2);
+    writeVideo(myVideo, frame);
+
 end
+close(myVideo)
