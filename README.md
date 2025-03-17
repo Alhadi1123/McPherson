@@ -12,6 +12,8 @@ This project:
 - Simulates the system's response to various input signals.  
 - Generates **animated visualizations** of the suspension behavior.  
 
+The aim of the project is to implement numerical analysis methods for simulating real-world mechanisms. 
+
 ## Features  
 ✔ **Mathematical Modeling**: Derivation of equations of motion using Hamilton’s Principle and Lagrangian dynamics.  
 ✔ **MATLAB Implementation**: Numerical solving of equations and visualization.  
