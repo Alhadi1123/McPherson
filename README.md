@@ -1,10 +1,10 @@
 # McPherson Strut Simulation and Modeling  
 
-This repository contains the MATLAB code, simulation results, and animations for the McPherson strut suspension system. The project models a quarter-car suspension system, deriving its kinematics and dynamics, and simulating its response to different road profiles.  
+This repository contains the MATLAB code, simulation results, and animations for the **McPherson strut suspension system**. The project models a **quarter-car suspension system**, deriving its kinematics and dynamics, and simulating its response to different road profiles.  
 
 ## Overview  
 
-Suspension systems are critical in vehicle dynamics, affecting ride comfort, handling stability, and safety. The **McPherson strut** is one of the most commonly used suspension systems due to its simplicity, compact design, and cost-effectiveness.  
+Suspension systems are critical in vehicle dynamics, affecting ride comfort, handling stability, and safety. The **McPherson strut** is one of the most commonly used suspension systems due to its **simplicity, compact design, and cost-effectiveness**.  
 
 This project:  
 - Models the McPherson strut suspension using **Lagrangian dynamics**.  
@@ -24,13 +24,3 @@ This project:
 - 📊 **Figures** → Plots of system response under different conditions.  
 - 🎥 **Animation** → Visualization of the McPherson strut suspension in action.  
 
-## Getting Started  
-
-### Prerequisites  
-- MATLAB (Tested on R2023a, but should work on other versions).  
-
-### Running the Simulation  
-1. Clone this repository:  
-   ```sh
-   git clone https://github.com/yourusername/McPherson-Strut.git
-   cd McPherson-Strut
